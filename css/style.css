@@ -79,7 +79,18 @@ ul{ margin:0; padding:0; list-style:none; }
   -webkit-backdrop-filter:blur(18px) saturate(140%);
   border-bottom-color:var(--line-soft);
 }
-.brand{ display:flex; align-items:center; gap:7px; }
+.brand{ display:flex; align-items:center; gap:9px; }
+.brand-avatar{
+  position:relative; display:grid; place-items:center;
+  width:36px; height:36px; border-radius:50%;
+  background:linear-gradient(150deg,#2b2f6b,#5a2f7a);
+  border:1px solid var(--line); overflow:visible;
+  transition:transform .35s var(--ease);
+}
+.brand:hover .brand-avatar{ transform:rotate(-4deg) scale(1.06); }
+.brand-avatar img{
+  width:100%; height:100%; border-radius:50%; object-fit:cover;
+}
 .brand-mark{
   font-family:var(--display); font-weight:900; font-size:19px;
   letter-spacing:-.04em;
